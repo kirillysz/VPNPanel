@@ -7,6 +7,3 @@ class UserTemplateConfig(BaseModel):
     expire_duration: int = Field(..., ge=0, description="Expiration duration in seconds, must be >= 0")
     inbounds: Optional[Dict[str, List[str]]] = Field(default_factory=dict, description="Dictionary of protocol:inbound_tags, empty means all inbounds")
 
-
-class CreateUserTemplateRequest(BaseModel):
-    additionalProp1: List[UserTemplateConfig]
