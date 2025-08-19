@@ -1,4 +1,4 @@
-from src.marzban.utils import extract_api_url
+from marzban.utils import extract_api_url
 from aiohttp import ClientSession
 
 class Panel:

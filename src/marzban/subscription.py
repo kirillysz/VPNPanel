@@ -1,4 +1,4 @@
-from src.marzban.panel import Panel
+from marzban import Panel
 
 class Subscription:
     def __init__(self, panel: Panel, subscription_prefix: str):

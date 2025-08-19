@@ -1,5 +1,5 @@
-from src.marzban.panel import Panel
-from src.marzban.models.hosts_model import ModifyHostsRequest
+from marzban import Panel
+from marzban.models.hosts_model import ModifyHostsRequest
 
 class System:
     def __init__(self, panel: Panel):

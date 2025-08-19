@@ -1,10 +1,15 @@
 [project]
 name = "vpnpanel"
 version = "0.1.0"
-description = "Add your description here"
+description = "Async wrapper for Marzban panel API"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
+authors = [
+    { name="Kirill", email="kirisa49@gmail.com" }
+]
 dependencies = [
     "aiohttp>=3.12.15",
-    "fastapi[standard]>=0.116.1",
+    "pydantic>=2.0",
 ]
+
+packages = ["marzban-client"]
