@@ -16,7 +16,11 @@ dependencies = [
     "pydantic>=2.0",
 ]
 
-homepage = "https://github.com/kirillysz/marzban-client"
+urls = { 
+    "Homepage" = "https://github.com/kirillysz/marzban-client",
+    "Documentation" = "https://github.com/kirillysz/marzban-client/blob/main/DOCS.md,
+    "Source" = "https://github.com/kirillysz/marzban-client",
+}
 
 
 [tool.setuptools.packages.find]
