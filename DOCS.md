@@ -6,6 +6,7 @@
 * [Subscription Class](#subscription-class)
 * [System Class](#system-class)
 * [User Class](#user-class)
+* [Templates Class](#templates-class)
 
 ## Panel Class Documentation <a id="panel-class"></a>
 
@@ -598,3 +599,96 @@ Delete all users whose accounts have expired.
 **Returns:**
 
 * `dict`: API response confirming deletion.
+
+---
+
+# UserTemplate Documentation <a id="templates-class"></a>
+
+The `UserTemplate` class provides an abstraction layer for managing **user templates** through the `Panel` API.
+It includes methods for creating, retrieving, updating, and deleting templates.
+
+---
+
+## Initialization
+
+```python
+from marzban import Panel
+from marzban.models.user_template_model import UserTemplateConfig
+from marzban.user_template import UserTemplate
+
+panel = Panel(panel_url="https://marzban.panel:8000/DASHBOARD_PATH")
+user_templates = UserTemplate(panel)
+```
+
+**Parameters:**
+
+* `panel (Panel)`: Instance of the Panel API client.
+
+---
+
+## Methods
+
+### `add_user_template(template: UserTemplateConfig) -> dict`
+
+Add a new user template.
+
+**Parameters:**
+
+* `template (UserTemplateConfig)`: The configuration of the template to create.
+
+**Returns:**
+
+* `dict`: Created template's data.
+
+---
+
+### `get_user_templates() -> dict`
+
+Retrieve a list of user templates.
+
+**Returns:**
+
+* `dict`: A dictionary containing templates' data (may include pagination info).
+
+---
+
+### `get_user_template_endpoint(template_id: int) -> dict`
+
+Retrieve information about a specific user template by its ID.
+
+**Parameters:**
+
+* `template_id (int)`: The ID of the user template.
+
+**Returns:**
+
+* `dict`: The template's details.
+
+---
+
+### `modify_user_template(template_id: int, template: UserTemplateConfig) -> dict`
+
+Update an existing user template.
+
+**Parameters:**
+
+* `template_id (int)`: The ID of the user template to update.
+* `template (UserTemplateConfig)`: The updated template configuration.
+
+**Returns:**
+
+* `dict`: The updated template's data.
+
+---
+
+### `remove_user_template(template_id: int) -> dict`
+
+Delete a user template by ID.
+
+**Parameters:**
+
+* `template_id (int)`: The ID of the user template to remove.
+
+**Returns:**
+
+* `dict`: The API response after deletion.
