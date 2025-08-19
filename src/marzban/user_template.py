@@ -9,7 +9,7 @@ class UserTemplate:
     async def add_user_template(self, template: UserTemplateConfig):
         response = await self.panel.request(
             endpoint=f"{self.user_template_prefix}",
-            method="GET",
+            method="POST",
             data=template.dict()
         )
         return response
