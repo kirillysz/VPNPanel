@@ -1,6 +1,6 @@
 from src.marzban.panel import Panel
 
-class AdminFunctions:
+class Admin:
     def __init__(self, panel: Panel):
         self.panel = panel
         self.admin_prefix = "admin"
