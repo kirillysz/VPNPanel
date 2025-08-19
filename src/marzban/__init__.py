@@ -4,3 +4,4 @@ from .core import Core
 from .node import Node
 from .subscription import Subscription
 from .admin import Admin
+from .user_template import UserTemplate
