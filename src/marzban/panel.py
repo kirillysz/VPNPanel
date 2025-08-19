@@ -3,6 +3,12 @@ from aiohttp import ClientSession
 
 class Panel:
     def __init__(self, panel_url: str, token: str = ""):
+        """The `Panel` class provides the main API client for interacting with a Marzban panel.  
+
+        Args:
+            panel_url (str): Panel url
+            token (str, optional): JWT Token (can be get from admin.get_token()). Defaults to "".
+        """
         self.panel_url = panel_url.rstrip("/")
         self.api_url = extract_api_url(panel_url)
 
