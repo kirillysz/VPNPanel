@@ -5,3 +5,5 @@ from .node import Node
 from .subscription import Subscription
 from .admin import Admin
 from .user_template import UserTemplate
+from .utils import extract_api_url
+from .user import User

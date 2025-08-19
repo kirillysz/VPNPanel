@@ -1,5 +1,5 @@
 [project]
-name = "vpnpanel"
+name = "marzban"
 version = "0.1.0"
 description = "Async wrapper for Marzban panel API"
 readme = "README.md"
@@ -12,4 +12,6 @@ dependencies = [
     "pydantic>=2.0",
 ]
 
-packages = ["marzban-client"]
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["marzban*"]

@@ -1,9 +1,16 @@
-from typing import Dict, Optional
-from pydantic import BaseModel, Field, constr, conint
-from datetime import datetime
+from typing import Dict, Optional, Annotated
+from pydantic import BaseModel, Field
 
 class UserModel(BaseModel):
-    username: constr(min_length=3, max_length=32, regex=r'^[a-z0-9_]+$')
+    username: Annotated[
+        str,
+        Field(
+            min_length=3,
+            max_length=32,
+            pattern=r'^[a-z0-9_]+$',
+            description="Username, 3-32 chars, lowercase letters, digits, underscores only"
+        )
+    ]
     status: str = Field(default="active", description="User's status, defaults to active. Special rules if on_hold.")
     expire: int = Field(default=0, description="UTC timestamp for account expiration. Use 0 for unlimited.")
     data_limit: int = Field(default=0, description="Max data usage in bytes. 0 means unlimited.")
@@ -14,4 +21,3 @@ class UserModel(BaseModel):
     on_hold_timeout: Optional[int] = Field(default=None, description="UTC timestamp when on_hold status should start or end")
     on_hold_expire_duration: Optional[int] = Field(default=None, description="Duration in seconds for on_hold status")
     next_plan: Optional[str] = Field(default=None, description="Next user plan (resets after use)")
-
