@@ -1,6 +1,5 @@
 from src.marzban.panel import Panel
 
-
 class Core:
     def __init__(self, panel: Panel):
         self.panel = panel

@@ -50,3 +50,20 @@ class Panel:
 
                 await self.close()
                 return await resp.json()
+
+    
+    async def request_subscription(self, endpoint: str):
+        if not self.session:
+            await self.start()
+
+        url = f"{self.api_url}/{endpoint.lstrip('/')}"
+
+        async with self.session.get(url) as resp:
+            text = await resp.text()
+            if not resp.ok:
+                raise Exception(f"Subscription request failed {resp.status}: {text}")
+
+            content_type = resp.headers.get("Content-Type", "")
+            if "application/json" in content_type:
+                return await resp.json()
+            return text
