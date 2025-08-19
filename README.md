@@ -1,2 +1,12 @@
-# VPNPanel
-API для управления VPN (Marzban панель) на протоколе XRAY 
+# marzban-client
+
+Async Python wrapper for Marzban panel API.
+
+## Features
+- Manage users, hosts, inbounds, and subscriptions.
+- Async API using `aiohttp`.
+- Typed models with `pydantic`.
+
+## Installation
+```bash
+pip install marzban-client

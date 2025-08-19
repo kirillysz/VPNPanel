@@ -1,5 +1,5 @@
 [project]
-name = "marzban"
+name = "marzban-client"
 version = "0.1.0"
 description = "Async wrapper for Marzban panel API"
 readme = "README.md"
