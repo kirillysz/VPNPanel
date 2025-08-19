@@ -10,3 +10,6 @@ Async Python wrapper for Marzban panel API.
 ## Installation
 ```bash
 pip install marzban-client
+```
+## Documentation
+[DOCS](DOCS.md)
