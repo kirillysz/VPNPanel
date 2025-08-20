@@ -43,6 +43,8 @@ from marzban_client import Admin
 
 panel = Panel(panel_url="https://marzban.panel:8000/DASHBOARD_PATH")
 admin_manager = Admin(panel=panel)
+
+await admin_manager.get_token(username=username, password=password)
 ```
 
 ### Parameters
