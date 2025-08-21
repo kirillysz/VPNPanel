@@ -3,7 +3,7 @@
 Async Python wrapper for Marzban panel API.
 
 ## Usage
-[![Marzban-client Downloads](https://img.shields.io/pypi/dm/marzban-client?color=blue&label=Downloads)](https://pepy.tech/project/marzban-client)
+[![PyPI Downloads](https://static.pepy.tech/badge/marzban-client/month)](https://pepy.tech/projects/marzban-client)
 
 ## Features
 - Manage users, hosts, inbounds, and subscriptions.
